@@ -8,13 +8,16 @@ export type topBarProps = {
 }
 
 const Navigation = ({ menuItems }: topBarProps) => {
+
+    const renderedMenuItems = menuItems?.map((item, index) => (
+        <Link key={index} href={item.href}>
+            {item.label}
+        </Link>
+    ));
+
     return (
         <nav>
-            {menuItems && menuItems.length > 0 && menuItems.map((item, index) => (
-                <Link key={index} href={item.href}>
-                    {item.label}
-                </Link>
-            ))}
+            {renderedMenuItems}
         </nav>
     )
 }
