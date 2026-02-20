@@ -1,12 +1,14 @@
+@use "../../../styles/variables" as *;
+
 .top-bar {
     position: fixed;
     width: 100%;
-    background: rgba(113, 251, 0, 0.28);
+    background: $color-background-green;
     box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.45rem);
 
     &__content {
-        max-width: 1200px;
+        max-width: $content-width;
         margin: 0 auto;
         display: flex;
         align-items: center;
