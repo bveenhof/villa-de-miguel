@@ -1,10 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Button } from "./components";
+import { Button, Header } from "./components";
 
 export default function Home() {
+
+  const dummyMenuItems = [
+    { label: "About the villa", href: "#about-the-villa" },
+    { label: "Location", href: "#location" },
+    { label: "Rooms", href: "#rooms" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <div className={styles.page}>
+      <Header menuItems={dummyMenuItems} />
       <main className={styles.main}>
         <Image
           className={styles.logo}
