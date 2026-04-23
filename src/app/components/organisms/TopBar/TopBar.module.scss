@@ -2,10 +2,12 @@
 
 .top-bar {
     position: fixed;
+    top: 0;
     width: 100%;
     background: $color-background-green;
     box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.45rem);
+    z-index: 1;
 
     &__content {
         max-width: $content-width;
