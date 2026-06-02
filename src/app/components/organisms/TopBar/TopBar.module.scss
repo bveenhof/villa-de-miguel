@@ -1,0 +1,19 @@
+@use "../../../styles/variables" as *;
+
+.top-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    container-type: scroll-state;
+    z-index: 1;
+
+    &__content {
+        max-width: $content-width;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        transition: ease-out 0.35s all;
+    }
+}

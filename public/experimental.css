@@ -1,0 +1,8 @@
+@container scroll-state(stuck: top) {
+    .top-bar__content--sticky {
+        backdrop-filter: blur(0.45rem);
+        border-radius: 0.75rem;
+        box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.1);
+        transform: translateY(1.5rem);
+    }
+}

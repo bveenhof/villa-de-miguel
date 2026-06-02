@@ -1,6 +1,6 @@
 "use client";
 
-import { FieldButton } from "@/app/types";
+import { ButtonType } from "@/app/types";
 import React from "react";
 
 import styles from './Button.module.scss';
@@ -8,7 +8,7 @@ import styles from './Button.module.scss';
 const Button = ({
 	label = "Button",
     onClick,
-}: FieldButton ) => {
+}: ButtonType ) => {
 
     const handleClick = (event: React.MouseEvent, onClick?: (event?: React.MouseEvent) => void) => {
         console.log(event, "Button clicked");
