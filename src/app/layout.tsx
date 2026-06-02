@@ -33,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="/experimental.css" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TopBar logo={{ src: "/logo-villa-de-miguel.svg", alt: "Villa de Miguel - Where farm meets luxury" } as HTMLImageElement} menuItems={dummyMenuItems} menuButton={{ label: "Menu" }} />
         {children}

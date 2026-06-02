@@ -1,12 +1,10 @@
 @use "../../../styles/variables" as *;
 
 .top-bar {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    background: $color-background-green;
-    box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.45rem);
+    container-type: scroll-state;
     z-index: 1;
 
     &__content {
@@ -16,5 +14,6 @@
         align-items: center;
         justify-content: space-between;
         padding: 0.5rem 1rem;
+        transition: ease-out 0.35s all;
     }
 }
