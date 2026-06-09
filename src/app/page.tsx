@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
-import { Button, Header } from "./components";
+import { Button, Footer, Header } from "./components";
 
 export default function Home() {
 
@@ -21,6 +21,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer links={[]}  />
     </div>
   );
 }
