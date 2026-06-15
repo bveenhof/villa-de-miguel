@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer links={[]}  />
+      <Footer links={{title: "List of links"}} socials={{title: "Follow us on our social channels"}} location={{title: "Contact us", paragraph: "Somewhere in Davao"}}  />
     </div>
   );
 }

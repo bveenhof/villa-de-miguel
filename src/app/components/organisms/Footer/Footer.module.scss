@@ -2,14 +2,21 @@
 
 .footer {
     background-color: $color-brand-secondary;
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+    padding: 2rem 0;
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
 
     &__content {
         width: 100%;
         max-width: $content-width;
         margin: 0 auto;
         padding: $content-padding;
+        display: flex;
+        gap: 2rem;
     }
+
+        &__content > * {
+            flex: 1;
+        }
 
     &__socials {
         display: flex;
@@ -17,16 +24,33 @@
     }
 
     &__social-link {
-        background-color: hotpink;
+        background-color: $color-dark-gray;
         border-radius: 70% 30% 30% 70% / 60% 40%;
         padding: 1rem;
         width: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-       
+        transition: all 0.32s cubic-bezier(1, 0, 0, 1);
+
+        img {
+            filter: invert(1);
+        }
+
+        &:nth-child(2n) {
+            border-radius: 62% 50% 52% 48% / 62% 40% 72% 42%;
+        }
+
+        &:nth-child(3n) {
+            border-radius: 70% 54% 52% 60% / 54% 28% 96% 69%;
+        }
+
+        &:nth-child(4n) {
+            border-radius: 52% 48% 33% 62% / 64% 35% 60% 35%;
+        }
+
         &:hover {
-            background-color: $color-orange;
+            background-color: $color-gray;
         }
     }
 
