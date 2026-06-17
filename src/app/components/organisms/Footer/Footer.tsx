@@ -1,10 +1,9 @@
-import { LinkType } from '@/app/types';
+import { imageType, LinkType } from '@/app/types';
 import styles from './Footer.module.scss';
 
 
-type socialLink = {
-    link: LinkType;
-    icon: HTMLImageElement;
+interface socialLink extends LinkType {
+    icon: imageType;
 }
 
 export type footerProps = {
@@ -58,8 +57,8 @@ const Footer = ({ links, socials, location }: footerProps) => {
                         <ul>
                             {socials.socialLinks && socials.socialLinks.map((socialLink, index) => (
                                 <li key={index}>
-                                    <a href={socialLink.link.href} target="_blank" rel="noopener noreferrer">
-                                        <img src={socialLink.icon.src} alt={socialLink.link.label} className={styles.footer__icon} />
+                                    <a href={socialLink.href} target="_blank" rel="noopener noreferrer" className={styles["footer__social-link"]}>
+                                        <img src={socialLink.icon.src} alt={socialLink.label} className={styles.footer__icon} />
                                     </a>
                                 </li>
                             ))}
@@ -68,17 +67,6 @@ const Footer = ({ links, socials, location }: footerProps) => {
                 }
 
 
-                {/* <div className={styles.footer__socials}>
-                    <a href="https://www.facebook.com/villademiguel" target="_blank" rel="noopener noreferrer" className={styles["footer__social-link"]}>
-                        <img src="/icon-facebook.svg" alt="Facebook" className={styles.footer__icon} />
-                    </a>
-                    <a href="https://www.facebook.com/villademiguel" target="_blank" rel="noopener noreferrer" className={styles["footer__social-link"]}>
-                        <img src="/icon-instagram.svg" alt="Instagram" className={styles.footer__icon} />
-                    </a>
-                    <a href="https://www.facebook.com/villademiguel" target="_blank" rel="noopener noreferrer" className={styles["footer__social-link"]}>
-                        <img src="/icon-youtube.svg" alt="YouTube" className={styles.footer__icon} />
-                    </a>
-                </div> */}
             </section>
         </footer>
     )
