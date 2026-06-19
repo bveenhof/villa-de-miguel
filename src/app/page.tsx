@@ -4,7 +4,7 @@ import { Button, Footer, Header } from "./components";
 
 export default function Home() {
 
-  const dummyHeroImage = "https://fastly.picsum.photos/id/671/1920/1080.jpg?hmac=CxdJymHXpEZxgxKDkJdt4ytqN-sa7xQL2j0ApTRzMo0";
+  const dummyHeroImage = "https://fastly.picsum.photos/id/645/2509/1673.jpg?hmac=wgOsfwTE89oIqxv6x6otxMN9XBj9RR6VlRfXv46O9OQ";
 
   return (
     <div className={styles.page}>

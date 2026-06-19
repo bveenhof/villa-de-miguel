@@ -11,27 +11,45 @@ body {
 }
 
 body {
-  color: pink;
+  color: $color-text;
   background: $color-background-sand;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: typography.$font-size-body;
+  line-height: typography.$line-height-body;
 }
 
-// * {
-//   box-sizing: border-box;
-//   padding: 0;
-//   margin: 0;
-// }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-// a {
-//   color: inherit;
-//   text-decoration: none;
-// }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+ul {
+    padding: 0;
+}
+
+  li {
+      list-style: none;
+  }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+// Heading styling
+h4 {
+    margin-bottom: 0.5rem;
 }
