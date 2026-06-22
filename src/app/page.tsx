@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
-import { Button, Header } from "./components";
+import { Button, ContentSection, Header } from "./components";
 
 export default function Home() {
 
@@ -10,16 +10,11 @@ export default function Home() {
     <div className={styles.page}>
       <Header heroImage={dummyHeroImage} />
       <main className={styles.main}>
-        <section className={styles.section}>
-          <div className={styles.container}>
-            <h1>Villa de Miguel</h1>
-            <p>
-              Text
-            </p>
-
-            <Button label="Button component" />
-          </div>
-        </section>
+        <div className={styles.container}>
+          <ContentSection content={{ title: "Welcome to this villa", paragraph: "This is a simple content section, aligned to the left (default)." }} />
+          <ContentSection content={{ title: "Off to a good start", paragraph: "This is a simple content section, aligned to the center." }} contentAlignment="center" />
+          <ContentSection content={{ title: "Rounding things up", paragraph: "This is a simple content section, aligned to the right." }} contentAlignment="right" />
+        </div>
       </main>
     </div>
   );

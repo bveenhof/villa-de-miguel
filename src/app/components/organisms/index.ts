@@ -1,1 +1,2 @@
+export { default as ContentSection } from "./ContentSection/ContentSection";
 export { default as Header } from "./Header/Header";
