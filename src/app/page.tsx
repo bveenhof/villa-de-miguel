@@ -11,9 +11,9 @@ export default function Home() {
       <Header heroImage={dummyHeroImage} />
       <main className={styles.main}>
         <div className={styles.container}>
-          <ContentSection content={{ title: "Welcome to this villa", paragraph: "This is a simple content section, aligned to the left (default)." }} />
-          <ContentSection content={{ title: "Off to a good start", paragraph: "This is a simple content section, aligned to the center." }} contentAlignment="center" />
-          <ContentSection content={{ title: "Rounding things up", paragraph: "This is a simple content section, aligned to the right." }} contentAlignment="right" />
+          <ContentSection title="Welcome to this villa" paragraph="This is a simple content section, aligned to the left (default)." />
+          <ContentSection title="Off to a good start" paragraph="This is a simple content section, aligned to the center." contentAlignment="center" />
+          <ContentSection title="Rounding things up" paragraph="This is a simple content section, aligned to the right." contentAlignment="right" />
         </div>
       </main>
     </div>

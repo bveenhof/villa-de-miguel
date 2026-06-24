@@ -3,30 +3,24 @@
 import clsx from "clsx";
 import styles from './ContentSection.module.scss';
 
-type content = {
+export type contentSectionProps = {
     title: string;
     paragraph?: string;
-}
-
-export type contentSectionProps = {
-    content: content;
     contentAlignment?: 'left' | 'center' | 'right';
     images?: Array<HTMLImageElement>;
 }
 
-const ContentSection = ({ content, contentAlignment = 'left', images }: contentSectionProps) => {
+const ContentSection = ({ title, paragraph, contentAlignment = 'left', images }: contentSectionProps) => {
 
     return (
         <section className={clsx(styles['content-section'], styles[`content-section--${contentAlignment}`])}>
             <div className={styles['content-section__content']}>
-                <h2>{content.title}</h2>
-                {content.paragraph && <p>{content.paragraph}</p>}
+                <h2>{title}</h2>
+                {paragraph && <div>{paragraph}</div>}
             </div>
             <div className={styles['content-section__images']}>
                 {images && images.map((image, index) => (
-                    <div key={index} className={styles['content-section__image']}>
-                       plaatje
-                    </div>
+                    <img src={image.src} alt={image.alt} key={index} />
                 ))}
             </div>
         </section>
