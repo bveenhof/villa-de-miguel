@@ -6,5 +6,6 @@ export {
 
 export {
     ContentSection,
+    Footer,
     Header,
 } from "./organisms";
