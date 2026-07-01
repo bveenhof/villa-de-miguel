@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.module.scss";
+import "./globals.scss";
 import TopBar from "./components/organisms/TopBar/TopBar";
 
 const geistSans = Geist({
@@ -37,7 +37,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/experimental.css" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <TopBar logo={{ src: "/logo-villa-de-miguel.svg", alt: "Villa de Miguel - Where farm meets luxury" } as HTMLImageElement} menuItems={dummyMenuItems} menuButton={{ label: "Menu" }} />
+        <TopBar logo={{ src: "/logo-villa-de-miguel.svg", alt: "Villa de Miguel - Where farm meets luxury" } as HTMLImageElement} menuItems={dummyMenuItems} />
         {children}
       </body>
     </html>

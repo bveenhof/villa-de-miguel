@@ -1,16 +1,26 @@
 
 // Color palette
-$color-brand-primary: #ebcd5a;
-$color-brand-secondary: #f0e1a8;
+$color-brand-primary: #f2b401;
+$color-brand-secondary: #4f6630;
 
-$color-background-sand: #f7f5ee;
+$color-background-sand: #f2e8cf;
 $color-background-green: #edf1e7;
 
-$color-green: #1b451e;
+$color-green: #84ac0d;
 $color-orange: #d86d38;
+$color-sand: $color-background-sand;
+$color-yellow: $color-brand-primary;
+
+$color-gray: #3a3a3a;
+$color-dark-gray: #1a1a1a;
+$color-yellow: #f2c86c;
 
 
 // Sizes
 $content-width: 90rem;
 $content-padding: 1.5rem;
 $content-padding-mobile: 1rem;
+
+
+// Font colors
+$color-text: $color-dark-gray;
