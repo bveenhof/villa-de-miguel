@@ -1,13 +1,58 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/breakpoints" as breakpoints;
+
 .content-section {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+
+    @media screen and (min-width: breakpoints.$min-breakpoint-s) {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
-.content-section--center {
-    align-items: center;
-    text-align: center;
+    .content-section--image-left {
+        flex-direction: row-reverse;
+    }
+
+.content-section__content {
+    flex: 1 0 40%;
 }
 
-.content-section--right {
-    align-items: flex-end;
+.content-section__images {
+    display: flex;
+    gap: 1rem;
 }
+
+    .content-section__image-wrapper {
+        overflow: hidden;
+        border-radius: 8px;
+        width: auto;
+        height: 100%;
+        max-height: 35rem;
+        max-width: 50%;
+
+        img {
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &:nth-child(1) {
+            margin-top: 1rem;
+        }
+
+        &:nth-child(2) {
+            margin-bottom: 1rem;
+        }
+
+        &:nth-child(3) {
+            margin-top: 1.25rem;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }

@@ -2,25 +2,28 @@
 
 import clsx from "clsx";
 import styles from './ContentSection.module.scss';
+import { imageType } from "@/app/types";
 
 export type contentSectionProps = {
     title: string;
     paragraph?: string;
-    contentAlignment?: 'left' | 'center' | 'right';
-    images?: Array<HTMLImageElement>;
+    imagePosition?: 'left' | 'right';
+    images?: Array<imageType>;
 }
 
-const ContentSection = ({ title, paragraph, contentAlignment = 'left', images }: contentSectionProps) => {
+const ContentSection = ({ title, paragraph, imagePosition = 'right', images }: contentSectionProps) => {
 
     return (
-        <section className={clsx(styles['content-section'], styles[`content-section--${contentAlignment}`])}>
+        <section className={clsx(styles['content-section'], styles[`content-section--image-${imagePosition}`])}>
             <div className={styles['content-section__content']}>
                 <h2>{title}</h2>
                 {paragraph && <div>{paragraph}</div>}
             </div>
             <div className={styles['content-section__images']}>
                 {images && images.map((image, index) => (
-                    <img src={image.src} alt={image.alt} key={index} />
+                    <div key={index} className={styles['content-section__image-wrapper']}>
+                        <img src={image.src} alt={image.alt}  />
+                    </div>
                 ))}
             </div>
         </section>

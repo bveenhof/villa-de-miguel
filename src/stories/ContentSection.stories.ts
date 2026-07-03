@@ -21,7 +21,7 @@ export const Default: Story = {
     title: "Welcome to this villa",
     paragraph: "This is a simple content section, it contains some content.",
     images: [
-      // { src: "https://picsum.photos/200/300", alt: "Image 1" },
+      { src: "https://picsum.photos/900/1200", alt: "Image 1" },
     ],
   },
 };
@@ -31,8 +31,8 @@ export const MultipleImages: Story = {
     title: "Welcome to this villa",
     paragraph: "This is a simple content section, with content and multiple images.",
     images: [
-      // { src: "https://picsum.photos/200/300", alt: "Image 1" },
-      // { src: "https://picsum.photos/200/300", alt: "Image 2" },
+      { src: "https://picsum.photos/900/1200", alt: "Image 1" },
+      { src: "https://picsum.photos/900/1260", alt: "Image 2" },
     ],
   },
 };

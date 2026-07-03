@@ -1,0 +1,15 @@
+.image {
+
+    &--hover-animation {
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05) rotate(4deg);
+        }
+
+    }
+
+    &--rounded {
+        border-radius: 8px;
+    }
+}
