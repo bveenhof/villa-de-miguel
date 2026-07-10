@@ -5,6 +5,10 @@ export {
 } from "./atoms";
 
 export {
+    Map,
+} from "./molecules";
+
+export {
     Footer,
     Header,
 } from "./organisms";

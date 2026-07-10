@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
-import { Button, Footer, Header } from "./components";
+import { Button, Footer, Header, Map } from "./components";
 
 export default function Home() {
 
@@ -10,6 +10,9 @@ export default function Home() {
     <div className={styles.page}>
       <Header heroImage={dummyHeroImage} />
       <main className={styles.main}>
+         <section className={styles.section}>
+           <Map />
+         </section>
         <section className={styles.section}>
           <div className={styles.container}>
             <h1>Villa de Miguel</h1>
