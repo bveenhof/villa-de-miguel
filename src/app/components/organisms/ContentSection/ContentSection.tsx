@@ -12,6 +12,7 @@ export type contentSectionProps = {
 }
 
 const ContentSection = ({ title, paragraph, imagePosition = 'right', images }: contentSectionProps) => {
+    const hasMultipleImages = images && images.length > 1;
 
     return (
         <section className={clsx(styles['content-section'], styles[`content-section--image-${imagePosition}`])}>
@@ -19,7 +20,7 @@ const ContentSection = ({ title, paragraph, imagePosition = 'right', images }: c
                 <h2>{title}</h2>
                 {paragraph && <div>{paragraph}</div>}
             </div>
-            <div className={styles['content-section__images']}>
+            <div className={clsx(styles['content-section__images'], styles[hasMultipleImages ? 'content-section__images--multiple' : ''])}>
                 {images && images.map((image, index) => (
                     <div key={index} className={styles['content-section__image-wrapper']}>
                         <img src={image.src} alt={image.alt}  />

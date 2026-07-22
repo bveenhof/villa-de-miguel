@@ -10,9 +10,7 @@ export default function Home() {
     <div className={styles.page}>
       <Header heroImage={dummyHeroImage} />
       <main className={styles.main}>
-        <ContentSection title="Welcome to this villa" paragraph="This is a simple content section, aligned to the left (default)." />
-        <ContentSection title="Off to a good start" paragraph="This is a simple content section, aligned to the center." imagePosition="right" />
-        <ContentSection title="Rounding things up" paragraph="This is a simple content section, aligned to the right." />
+
       </main>
       <Footer links={{title: "List of links"}} socials={{title: "Follow us on our social channels"}} location={{title: "Contact us", paragraph: "Somewhere in Davao"}}  />
     </div>
