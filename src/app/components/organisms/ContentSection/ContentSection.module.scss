@@ -32,36 +32,18 @@
     display: flex;
     gap: 1rem;
     align-items: stretch;
+
+    img {
+        max-height: 32rem;
+    }
 }
 
-    .content-section__image-wrapper {
-        overflow: hidden;
-        border-radius: 8px;
-        display: flex;
-        width: auto;
-        max-height: 32rem;
-        max-width: 50%;
-        background-color: red;
-
-        img {
-            height: 100%;
-            width: 100%;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        &:hover img {
-            transform: scale(1.05);
-        }
-    }
-
 .content-section__images--multiple {
-    .content-section__image-wrapper:nth-child(1) {
+    > *:nth-child(1) {
         transform: translateY(2rem);
     }
 
-    .content-section__image-wrapper:nth-child(3) {
+    > *:nth-child(3) {
         transform: translateY(1.25rem);
     }
 }
