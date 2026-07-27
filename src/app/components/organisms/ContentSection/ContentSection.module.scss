@@ -1,0 +1,49 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/breakpoints" as breakpoints;
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+
+    @media screen and (min-width: breakpoints.$min-breakpoint-m) {
+        gap: 2rem;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+    .content-section--image-left {
+        flex-direction: column-reverse;
+
+        @media screen and (min-width: breakpoints.$min-breakpoint-m) {
+            flex-direction: row-reverse;
+        }
+    }
+
+.content-section__content {
+    flex: 1 0 40%;
+}
+
+.content-section__images {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+
+    img {
+        max-height: 32rem;
+    }
+}
+
+.content-section__images--multiple {
+    > *:nth-child(1) {
+        transform: translateY(2rem);
+    }
+
+    > *:nth-child(3) {
+        transform: translateY(1.25rem);
+    }
+}

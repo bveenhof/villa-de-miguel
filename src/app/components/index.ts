@@ -5,6 +5,7 @@ export {
 } from "./atoms";
 
 export {
+    ContentSection,
     Footer,
     Header,
 } from "./organisms";

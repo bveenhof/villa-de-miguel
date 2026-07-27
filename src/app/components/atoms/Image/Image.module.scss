@@ -1,0 +1,24 @@
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper--hover-animation {
+    img {
+        transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover > img {
+        transform: scale(1.05);
+    }
+}
+
+.image-wrapper--rounded {
+    border-radius: 8px;
+}
+
+
+.image {
+    position: relative !important;
+    display: flex;
+}
