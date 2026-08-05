@@ -12,12 +12,14 @@ type Story = StoryObj<typeof Map>;
 
 export const Default: Story = {
 	args: {
-        villaMarker: {
-            lat: 7.5631116,
-            lng: 126.5391292,
-            content: "<strong>Villa de Miguel</strong><br/> This is our villa!",
-        },
-        pointsOfInterest: [
+        locations: [
+            {
+                lat: 7.5631116,
+                lng: 126.5391292,
+                content: "<strong>Villa de Miguel</strong><br/> This is our villa!",
+                isVilla: true,
+                isActive: true,
+            },
             {
                 lat: 7.7042,
                 lng: 126.2917,

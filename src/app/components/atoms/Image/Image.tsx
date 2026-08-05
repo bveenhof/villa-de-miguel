@@ -2,21 +2,38 @@
 
 import clsx from "clsx";
 import Image from "next/image";
+import styles from './Image.module.scss';
 
 export type ImageProps = {
     alt: string;
-    className?: string;
     hasHoverEffect?: boolean;
+    hasRoundedCorners?: boolean;
 	height?: number;
     src: string;
     width?: number;
 }
 
-const ImageWrapper = ({ src, className, alt, hasHoverEffect = false, width, height }: ImageProps) => {
+const ImageWrapper = ({ src, alt, hasHoverEffect = false, hasRoundedCorners = false, width, height }: ImageProps) => {
     const useFill = !width || !height;
 
     return (
-        <Image src={src} alt={alt} fill={useFill} width={width} height={height}  className={clsx('image', hasHoverEffect && "image--hover-animation", className)} />
+        <div className={
+            clsx(
+                    styles['image-wrapper'],
+                    hasHoverEffect && styles['image-wrapper--hover-animation'],
+                    hasRoundedCorners && styles['image-wrapper--rounded']
+                )
+            }
+        >
+            <Image 
+                src={src}
+                alt={alt}
+                fill={useFill}
+                width={width}
+                height={height}
+                className={clsx(styles['image'])} 
+            />
+        </div>
     )
 }
 

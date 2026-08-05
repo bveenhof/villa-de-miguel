@@ -1,7 +1,7 @@
 export {
     Button,
     Image,
-    type ImageProps
+    type ImageProps,
 } from "./atoms";
 
 export {
@@ -9,6 +9,7 @@ export {
 } from "./molecules";
 
 export {
+    ContentSection,
     Footer,
     Header,
 } from "./organisms";
