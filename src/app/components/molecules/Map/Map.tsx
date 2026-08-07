@@ -120,7 +120,7 @@ const Map = ({ locations, MapOptions = defaultMapProps }: MapProps) => {
             showInfoWindow(location.content, marker, true);
           });
 
-          if (index === 0) {
+          if (location.isActive) {
             showInfoWindow(location.content, marker, false);
           }
         });
