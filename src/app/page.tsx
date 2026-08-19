@@ -1,10 +1,8 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 import { ComponentMapper, ContentSection, Footer, Hero } from "./components";
 import { client } from '@/sanity/lib/client'
 
 export default async function Home() {
-  const dummyHeroImage = "https://fastly.picsum.photos/id/645/2509/1673.jpg?hmac=wgOsfwTE89oIqxv6x6otxMN9XBj9RR6VlRfXv46O9OQ";
 
   const query = `*[_type == "page" && title == "Homepage"][0]{
     title,
