@@ -31,7 +31,7 @@ const ImageWrapper = ({ src, alt, hasHoverEffect = false, hasRoundedCorners = fa
                 fill={useFill}
                 width={width}
                 height={height}
-                className={styles['image']} 
+                className={clsx(styles['image'])} 
             />
         </div>
     )

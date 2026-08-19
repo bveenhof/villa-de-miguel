@@ -1,8 +1,12 @@
 export {
     Button,
     Image,
-    type ImageProps
+    type ImageProps,
 } from "./atoms";
+
+export {
+    Map,
+} from "./molecules";
 
 export {
     ContentSection,

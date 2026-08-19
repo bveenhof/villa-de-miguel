@@ -16,7 +16,7 @@ const Header = ({ heroImage }: headerProps) => {
                 <p className={styles['header__hero-subtitle']}>Experience the perfect blend of nature and comfort at our charming countryside retreat.</p>
             </div>
 
-           <Image src={heroImage} alt="Hero image" className={styles["header__hero-image"]} />
+           <Image src={heroImage} alt="Hero image" />
         </header>
     )
 }
