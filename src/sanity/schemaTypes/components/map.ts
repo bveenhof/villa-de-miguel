@@ -26,14 +26,14 @@ export const mapType = defineType({
                     type: 'text',
                 }),
                 defineField({
-                    name: 'lattitude',
+                    name: 'lat',
                     title: 'Lattitude',
-                    type: 'string',
+                    type: 'number',
                 }),
                 defineField({
-                    name: 'longitude',
+                    name: 'lng',
                     title: 'Longitude',
-                    type: 'string',
+                    type: 'number',
                 }),
                 defineField({
                     name: 'isActive',

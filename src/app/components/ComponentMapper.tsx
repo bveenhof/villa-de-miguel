@@ -4,6 +4,10 @@ import {
     Hero,
 } from "./organisms";
 
+import {
+  Map
+} from "./molecules";
+
 interface BaseSanityBlock {
   _type: string;
   _key: string;
@@ -12,8 +16,9 @@ interface BaseSanityBlock {
 
 const componentMap: Record<string, React.ComponentType<any>> = {
     contentSection: ContentSection,
+    footer: Footer, 
     hero: Hero,
-    footer: Footer,
+    map: Map,
 };
 
 interface ComponentMapperProps {
