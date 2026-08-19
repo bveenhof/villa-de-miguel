@@ -2,7 +2,7 @@ import {
     ContentSection,
     Footer,
     Hero,
-} from "./index";
+} from "./organisms";
 
 interface BaseSanityBlock {
   _type: string;

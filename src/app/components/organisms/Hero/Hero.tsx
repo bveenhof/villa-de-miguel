@@ -1,6 +1,6 @@
 "use client"
 
-import { Image } from "@/app/components";
+import { Image } from "@/app/components/atoms";
 import styles from './Hero.module.scss';
 
 export type heroProps = {
