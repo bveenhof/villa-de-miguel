@@ -18,6 +18,11 @@ export const structure: StructureResolver = (S) =>
                   S.document().schemaType('socials').documentId('social-media-items').title('Social media channels')
                 ),
               S.listItem()
+                .title('Contact Information')
+                .child(
+                  S.document().schemaType('contactInfo').documentId('global-contact-info').title('Contact information')
+                ),
+              S.listItem()
                 .title('Footer')
                 .child(
                   S.document().schemaType('footer').documentId('global-footer').title('Footer settings')

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
-import TopBar from "./components/organisms/TopBar/TopBar";
+import { client } from "@/sanity/lib/client";
+
+import { Footer, TopBar } from "./components";  
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +28,37 @@ const dummyMenuItems = [
     { label: "Contact", href: "#contact" },
   ];
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const globalQuery = `{
+    "contactInfo": *[_type == "contactInfo"][0],
+    "footer": *[_type == "footer"][0],
+    "socials": *[_type == "socials"][0]
+  }`;
+
+  const globalData = await client.fetch(globalQuery, {}, { next: { revalidate: 10 } });
+
+  console.log("SANITY GLOBAL DATA:", JSON.stringify(globalData, null, 2));
+
+  const footerData = {
+    links: {
+      title: globalData.footer.linksContent,
+      linkList: globalData.footer.linkList,
+    },
+    socials: {
+      title: globalData.footer.socialsTitle,
+      content: globalData.footer.socialsContent,
+      socialList: globalData.socials.channels,
+    },
+    location: {
+      title: globalData.footer.locationTitle,
+      paragraph: globalData.contactInfo.address.map((block: any) => block.children.map((child: any) => child.text).join("")).join("\n"),
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -39,6 +67,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TopBar logo={{ src: "/logo-villa-de-miguel.svg", alt: "Villa de Miguel - Where farm meets luxury" } as HTMLImageElement} menuItems={dummyMenuItems} />
         {children}
+        <Footer links={footerData.links} socials={footerData.socials} location={footerData.location} />
       </body>
     </html>
   );

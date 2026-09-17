@@ -12,6 +12,7 @@ export {
     ContentSection,
     Footer,
     Hero,
+    TopBar,
 } from "./organisms";
 
 export { default as ComponentMapper } from "./ComponentMapper";
